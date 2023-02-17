@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+
 /**
 * main - print whether the random assigned number stored in the variable n is positive, zero or negative
 *
@@ -16,13 +17,13 @@ int main(void)
 	{
 		printf("%d is %s\n", n, "positive");
 	}
-	else if (n = 0)
-	{
-		printf("%d is %s\n", n, "zero");
-	}
-	else (n < 0)
+	else if (n < 0)
 	{
 		printf("%d is %s\n", n, "negative");
+	}
+	else
+	{
+		printf("%d is %s\n", n, "zero");
 	}
 	return (0);
 }

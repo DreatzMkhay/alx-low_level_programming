@@ -10,7 +10,7 @@
  *
  * Return: Nothing.
  */
-void simple_print_buffer(char *buffer, unsigned int size);
+void simple_print_buffer(char *buffer, unsigned int size)
 {
 	unsigned int i;
 
@@ -36,7 +36,7 @@ void simple_print_buffer(char *buffer, unsigned int size);
  *
  * Return: Always 0.
  */
-int main(void);
+int main(void)
 {
 	char *a;
 
@@ -44,7 +44,7 @@ int main(void);
 	strcpy(a, "Best");
 	strcpy(a + 4, " School! :)\n");
 	a[97] = '!';
-	imple_print_buffer(a, 98);
+	simple_print_buffer(a, 98);
 	free(a);
 	return (0);
 }

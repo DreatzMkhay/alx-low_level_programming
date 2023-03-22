@@ -1,16 +1,18 @@
 #include <stdio.h>
 #include "3-calc.h"
 
-/** contain main function only.
+/**
+ * main - contain main function only.
+ * argc will be the number of strings pointed to by argv.
  * to use atoi to convert arguments to int.
  *
  * Return: 0 always
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	int a, b;
-	int (*operation)(int, int);
+	int (*func_ptr)(int, int);
 
 	if (argc != 4)
 	{
@@ -24,9 +26,9 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	operation = get_op_func(argv[2]);
+	func_ptr = get_op_func(argv[2]);
 
-	if (operation == NULL)
+	if (func_ptr == NULL)
 	{
 		printf("Error\n");
 		exit(99);
@@ -35,6 +37,6 @@ int main(int argc, char *argv[])
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 
-	printf("%d\n", operation(a, b));
+	printf("%d\n", func_ptr(a, b));
 	return (0);
 }
